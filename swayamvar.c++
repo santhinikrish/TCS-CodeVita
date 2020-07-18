@@ -1,4 +1,3 @@
-Swayamvar
 /*
 A ceremony where a Bride chooses her Groom from an array of eligible bachelors is called Swayamvar. But this is a Swayamvar with difference. An array of Bride-to-be will choose from an array of Groom-to-be.
 
@@ -85,7 +84,19 @@ Explanation
 
 Following the above process 2 pairs will be left unmatched. Remember that bride will not move until she gets a groom of her choice.
 */
-//This is The Coding Area
+n=int(input())
+b=list(input())
+g=list(input())
+for i in b:
+    if i in g:
+        g.remove(i)
+    else:
+        break
+print(len(g))
+
+      (or)
+
+      
 #include<bits/stdc++.h>
 using namespace std;
 int main(){
