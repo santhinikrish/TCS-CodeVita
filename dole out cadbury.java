@@ -85,3 +85,24 @@ int main()
   cout<<sum;
   return 0;
 }
+
+    (or)
+
+import java.util.Scanner;
+class Dole_Out_Cadbury {
+    static int count_of_chocolates = 0;
+    static void recursion(int i, int j) {
+        count_of_chocolates += 1;
+        if (i > j) recursion(i - j, j);
+        if (i < j) recursion(i, j - i);
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int length_start = sc.nextInt(), length_end = sc.nextInt(), breadth_start = sc.nextInt(), breadth_end = sc.nextInt();
+        for (int i = length_start; i <= length_end; i++)
+            for (int j = breadth_start; j <= breadth_end; j++)
+                recursion(i, j);
+        System.out.print(count_of_chocolates);
+    }
+}
